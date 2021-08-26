@@ -1,0 +1,92 @@
+@import url("https://fonts.googleapis.com/css?family=PT+Sans+Narrow&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  font-family: "PT Sans Narrow", sans-serif;
+}
+
+body {
+  background: #bf55ec;
+}
+
+.wrapper {
+  position: absolute;
+  top: 209%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 608px;
+  /* height: 387%; */
+  width: 300%;
+  background: white;
+  padding: 100px;
+  border-radius: 10px;
+  box-shadow: 4px 4px 2px rgba(254, 236, 164, 1);
+}
+
+.wrapper h1 {
+  text-align: center;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: #bf55ec;
+}
+
+.wrapper .input_field {
+  margin-bottom: 10px;
+}
+
+.wrapper .input_field input[type="text"],
+.wrapper .input_field input[type="password"],
+.wrapper .input_field input[type="password"],
+.wrapper .input_field input[type="date"] {
+  width: 100%;
+  border: 1px solid #bf55ec;
+  padding: 10px;
+  font-size: 15px;
+}
+
+.wrapper .input_field .sel {
+  width: 100%;
+  border: 1px solid #bf55ec;
+  padding: 10px;
+  font-size: 15px;
+}
+.wrapper .btn button[type="submit"] {
+  border: 1px solid;
+  margin-top: 15px;
+  padding: 10px;
+  width: 100%;
+  color: #332902;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-weight: bold;
+  border-radius: 25px;
+  background: #bf55ec;
+  cursor: pointer;
+  font-size: 25px;
+}
+.wrapper .text_field input[type="text"]{
+  width: 100%;
+  border: 1px solid #bf55ec;
+  padding: 10px;
+  font-size: 15px;
+}
+.wrapper .input_field input[type="date"] {
+  width: 100%;
+  border: 1px solid #bf55ec;
+  padding: 10px;
+  font-size: 15px;
+}
+.wrapper .error_message {
+  margin-bottom: 20px;
+  padding: 0px;
+  background-color: #bf55ec;
+  text-align: center;
+  font-size: 20px;
+  transition: all 0.5s ease;
+  font-weight: bold;
+  color: darkred;
+}
