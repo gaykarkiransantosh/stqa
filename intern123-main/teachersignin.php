@@ -8,7 +8,9 @@
 <html>
 <head>
   <title>SIGN IN</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" href="signin1.css">
+  <link rel="stylesheet" type="text/css" href="newteachersignin.css">
 </head>
 <?php
     $fnameError = $fname = $lnameError = $lname = $rollError = $rollNum = $mailError = $email = $phoneError = $phoneNum = $genderError = $gender = $branchError = $branch = $userError = $user = $passError = $pass = $cpassError = $cpass = $dateError = $date = $addrError = $address = $checkError = $check = $positionError = $position = $workingAddrError = $workingAddr = "";
@@ -157,38 +159,72 @@
     }
 ?>
 <body>
-  <div class="wrapper">
-    <h1>SIGN IN</h1><br>
-    <center><H3>Already signed in? <a href="login.html">CLICK TO CONTINUE</a></H3></center><br>
+  <div class="wrapper1" >
+    
+    <div class="form1">
+    <p class="text-center" style="font-size:2rem"><b>SIGN IN</b></p>
+    <center ><H3 >Already signed in? <a href="login.html">CLICK TO CONTINUE</a></H3></center>
+    <br>
+   <hr>
+   <br>
     <form  method="POST">
-    <div class="input_field">
-    <label for="fname">First Name:</label><br>
-    <input type="text" id="fname" name="fname"><br>
-    <div class="error_message">* <?php echo $fnameError;?></div><br>
+     <div class="row">
+      <div class="form-group col-md-6  ">
+      
+    <div class="input_field ">
+    <label for="fname">First Name:</label>
+    <input type="text" class="form-control" id="fname" name="fname">
+    <div class="error_message">* <?php echo $fnameError;?></div>
     </div>
+  </div>
+  <div class="form-group col-md-6 ">
     <div class="input_field">
-    <label for="lname">Last Name:</label><br>
-    <input type="text" id="lname" name="lname"><br>
-    <div class="error_message">* <?php echo $lnameError;?></div><br>
+    <label for="lname">Last Name:</label>
+    <input type="text" class="form-control" id="lname" name="lname">
+    <div class="error_message">* <?php echo $lnameError;?></div>
     </div>
-    <label for="username">Username:</label><br>
+  </div>
+  </div>
+  <div class="row">
+    <div class="form-group col-md-6">
+   
     <div class="input_field">
-      <input type="text" name="username" id="username" placeholder="USERNAME">
+    <label for="username">Username:</label>
+      <input class="form-control" type="text" name="username" id="username" placeholder="USERNAME">
       <div class="error_message">* <?php echo $userError;?></div>
-    </div><br>
-    <label for="password">Password:</label><br>
+    </div>
+  </div>
+  <div class="form-group col-md-6">
     <div class="input_field">
-      <input type="password" name="password" id="password" placeholder="PASSWORD">
+    <label for="email">Email Id:</label>
+    <input type="text" class="form-control" id="email" name="email">
+    <div class="error_message">* <?php echo $mailError;?></div>
+    </div>
+  </div>
+  </div>
+  <div class="row">
+    <div class="form-group col-md-6">
+  
+    <div class="input_field">
+    <label for="password">Password:</label>
+      <input class="form-control" type="password" name="password" id="password" placeholder="PASSWORD">
       <div class="error_message">* <?php echo $passError;?></div>
-    </div><br>
-    <label for="cpass">Confirm Password:</label><br>
+    </div>
+  </div>
+    <div class="form-group col-md-6">
+    
     <div class="input_field">
-      <input type="password" name="cpass" id="cpass" placeholder="CONFIRM PASSWORD">
+    <label for="cpass">Confirm Password:</label>
+      <input class="form-control" type="password" name="cpass" id="cpass" placeholder="CONFIRM PASSWORD">
       <div class="error_message">* <?php echo $cpassError;?></div>
-    </div><br>
+    </div>
+  </div>
+  </div>
+  <div class="row">
+    <div class="form-group col-md-6">
     <div class="input_field">
-        <label for="postition">Postition:</label><br><br>
-        <select class="sel" name="position" id="position">
+        <label for="postition">Postition:</label>
+        <select class="sel form-control" name="position" id="position">
             <option selected disabled value="">Select one</option>
             <option value="assnprof">Assistant Professor</option>
             <option value="assocprof">Associate Professor</option>
@@ -196,11 +232,13 @@
             <option value="pricipal">Principal</option>
             <option value="visitfact">Visiting Faculty</option>
         </select>
-        <div class="error_message">* <?php echo $positionError;?></div><br>
-    </div><br>
+        <div class="error_message">* <?php echo $positionError;?></div>
+    </div>
+  </div>
+    <div class="form-group col-md-6">
     <div class="input_field">
-        <label for="branch">Branch:</label><br><br>
-        <select class="sel" name="branch" id="branch">
+        <label for="branch">Branch:</label>
+        <select class="sel form-control" name="branch" id="branch">
             <option selected disabled value="">Select one</option>
             <option value="COMPS">Computer Engineering</option>
             <option value="ETRX">Electronics Engineering</option>
@@ -209,50 +247,77 @@
             <option value="MECH">Mechanical Engineering</option>
             <option value="S&H">Science and Humanities</option>
         </select>
-        <div class="error_message">* <?php echo $branchError;?></div><br>
-    </div><br>
+        <div class="error_message">* <?php echo $branchError;?></div>
+    </div>
+  </div>
+  </div>
+  <div class="row">
+    <div class="form-group col-md-6">
     <div class="input_field">
-    <label for="factnum">Faculty number:</label><br>
-    <input type="text" id="factnum" name="factnum"><br>
-    <div class="error_message">* <?php echo $rollError;?></div><br>
+    <label for="factnum">Faculty number:</label>
+    <input class="form-control" type="text" id="factnum" name="factnum">
+    <div class="error_message">* <?php echo $rollError;?></div>
     </div>
+  </div>
+    <div class="form-group col-md-6">
     <div class="input_field">
-    <label for="dt">Enter date of birth:</label><br>
-    <input type="date" id="dt" name="dt"></input><br>
-    <span class="error">* <?php echo $dateError;?></span><br>
+    <label for="dt">Enter date of birth:</label>
+    <input class="form-control" type="date" id="dt" name="dt"></input>
+    <span class="error">* <?php echo $dateError;?></span>
     </div>
+  </div>
+  </div>
+    <div class="row">
+    <div class="form-group col-md-6">
     <div class="input_field">
-    <label for="email">Email Id:</label><br>
-    <input type="text" id="email" name="email"><br>
-    <div class="error_message">* <?php echo $mailError;?></div><br>
+    <label for="phonenum">Phone Number:</label>
+    <input type="text" class="form-control" id="phonenum" name="phonenum">
+    <div class="error_message">* <?php echo $phoneError;?></div>
     </div>
+  </div>
+  <div class="form-group col-md-6">
+    <div class="text_field input_field">
+      <label for="addr">Working address:</label>
+      <input type="text" class="form-control" id="addr" name="addr">
+  <!--<textarea name="addr" id="addr" rows="5" cols="40"></textarea>-->
+     <span class="error">*<?php echo $workingAddrError;?>
+  </span> </div>
+  </div>
+  </div>
+    <div class="form-group ">
     <div class="input_field">
-    <label for="phonenum">Phone Number:</label><br>
-    <input type="text" id="phonenum" name="phonenum"><br>
-    <div class="error_message">* <?php echo $phoneError;?></div><br>
+    <label for="gender">Gender:</label>
+    <div class="form-check form-check-inline ">
+    <label class="form-check-label" for="female">Female</label>
+    <input class="form-check-input" type="radio" name="gender" value="female" id="female">
+</div> 
+  <div class="form-check form-check-inline ">
+ <label class="form-check-label" for="male">Male</label>
+ 
+ <input class="form-check-input" type="radio" name="gender" value="male" id="male"></label>
+  </div>
+  <div class="form-check form-check-inline ">
+      <label class="form-check-label" for="other">Other</label>
+      <input class="form-check-input" type="radio" name="gender" value="other" id="other">
+  </div>
+    <div class="error_message">* <?php echo $genderError;?></div>
     </div>
-    <div class="input_field">
-    <label for="gender">Gender:</label><br>
-    <label for="female">Female<input type="radio" name="gender" value="female" id="female"></label><br><br>
-    <label for="male">Male<input type="radio" name="gender" value="male" id="male"></label><br><br>
-    <label for="other">Other<input type="radio" name="gender" value="other" id="other"></label><br><br>
-    <div class="error_message">* <?php echo $genderError;?></div><br>
+  </div>
+    
+    <div class="form-check ">
+    <input class="form-check-input" type="checkbox" id="agree" name="agree" value="agree">
+    <label for="agree" class="form-check-label"> I agree with terms & conditions</label>
+    <div class="error_message">* <?php echo $checkError;?>
+  </div>
+    
+</div>
+  
+   <div class="btn">
+      <button class="btn btn-primary " type="submit "> SIGN IN</button> 
     </div>
-    <div class="text_field">
-      <label for="addr">Working address:</label><br>
-      <input type="text" id="addr" name="addr"><br>
-      <!--<textarea name="addr" id="addr" rows="5" cols="40"></textarea><br>-->
-      <span class="error">*<?php echo $workingAddrError;?></span><br><br>
-    </div>
-    <input type="checkbox" id="agree" name="agree" value="agree">
-    <label for="agree"> I agree with terms & conditions</label><br>
-    <div class="error_message">* <?php echo $checkError;?></div><br>
-    <div class="btn">
-      <button type="submit"> SIGN IN</button> 
-    </div>
-    <br><br><center><h6>YOU ARE ONE CLICK AWAY FROM PROVIDING YOUR DREAM INTERNSHIPS TO STUDENTS</h3></center>
+    <center><h6>YOU ARE ONE CLICK AWAY FROM PROVIDING YOUR DREAM INTERNSHIPS TO STUDENTS</h3></center>
 
     </form>
-  </div>
+  </div></div>
 </body>
 </html>

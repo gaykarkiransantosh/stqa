@@ -11,7 +11,7 @@
 body {
   background: #bf55ec;
 }
-
+/* 
 .wrapper {
   position: absolute;
   top: 209%;
@@ -19,7 +19,7 @@ body {
   transform: translate(-50%, -50%);
   max-width: 608px;
   /* height: 387%; */
-  width: 300%;
+  /* width: 300%;
   background: white;
   padding: 100px;
   border-radius: 10px;
@@ -89,4 +89,4 @@ body {
   transition: all 0.5s ease;
   font-weight: bold;
   color: darkred;
-}
+} */ 

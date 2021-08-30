@@ -5,21 +5,22 @@
   padding: 0;
   box-sizing: border-box;
   outline: none;
-  font-family: "PT Sans Narrow", sans-serif;
+ 
+  /* font-family: "PT Sans Narrow", sans-serif; */
 }
 
 body {
   background: #bf55ec;
 }
-
+/* 
 .wrapper {
   position: absolute;
   top: 150%;
   left: 50%;
   transform: translate(-50%, -50%);
-  max-width: 608px;
+  max-width: 608px; */
   /* height: 387%; */
-  width: 300%;
+  /* width: 300%;
   background: white;
   padding: 100px;
   border-radius: 10px;
@@ -88,4 +89,4 @@ body {
   font-size: 20px;
   transition: all 0.5s ease;
   font-weight: bold;
-}
+} */

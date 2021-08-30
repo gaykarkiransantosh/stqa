@@ -47,7 +47,7 @@ body {
   font-size: 15px;
 }
 
-.wrapper .btn button[type="submit"] {
+/* .wrapper .btn button[type="submit"] {
   border: 1px solid;
   margin-top: 15px;
   padding: 10px;
@@ -61,7 +61,7 @@ body {
   background: #bf55ec;
   cursor: pointer;
   font-size: 25px;
-}
+} */
 
 .wrapper #error_message {
   margin-bottom: 20px;

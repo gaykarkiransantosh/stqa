@@ -79,34 +79,43 @@ if($_SERVER['REQUEST_METHOD']== 'POST'){
 <head>
   <title>Forgot Password</title>
   <link rel="stylesheet" type="text/css" href="login.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="signin1.css">
+  <link rel="stylesheet" type="text/css" href="newteachersignin.css">
   <script type="text/javascript" src="scripts.js"></script>
 </head>
 <body>
 
-  <div class="wrapper">
-        <h1>LOGIN</h1><br>
-        <center><H3>New User?<a href="signin1.php" onmouseover="style.color='red'" onmouseout="style.color='black'" > CLICK TO SIGN IN </a></H3></center><br>
+  <div class="wrapper" style="background-color: aliceblue;">
+        <h1 style="color:black"><b>LOGIN</b></h1>
+        <center><H3>New User?<a href="signin1.php" onmouseover="style.color='red'" onmouseout="style.color='black'" > CLICK TO SIGN IN </a></H3></center>
         <div id="error_message"></div>
         <form action="" method="POST" >
-            <label for="username">Username:</label><br>
+          <div class="form-group">
+          
             <div class="input_field">
-            <input type="text" name="username" id="username" placeholder="USERNAME">
+            <label for="username">Username:</label>
+            <input type="text" class="form-control"  name="username" id="username" placeholder="USERNAME">
             <div class="error_message">* <?php echo $nameErr;?></div>
-            </div><br>
-            <label for="password">Password:</label><br>
+            </div>  </div>
+            <div class="form-group">
+            
             <div class="input_field">
-            <input type="password" name="password" id="password" placeholder="PASSWORD">
+            <label for="password">Password:</label>
+            <input type="password" class="form-control" name="password" id="password" placeholder="PASSWORD">
             <div class="error_message">* <?php echo $passErr;?></div>
-            </div><br>
-            <label for="cpass">Confirm Password:</label><br>
+            </div>  </div>
+            <div class="form-group">
+            
             <div class="input_field">
-            <input type="password" name="cpass" id="cpass" placeholder="CONFIRM PASSWORD">
+            <label for="cpass">Confirm Password:</label>
+            <input type="password" class="form-control" name="cpass" id="cpass" placeholder="CONFIRM PASSWORD">
             <div class="error_message">* <?php echo $cpassErr;?></div>
             </div>
-            <br>
-            <div class="btn">
-                <button type="submit" onmouseover="style.color='red'" onmouseout="style.color='black'" name="new-pass" id="new-pass" >Update Password</button> 
             </div>
+        
+                <button type="submit" class="b1 btn btn-primary" onmouseout="style.color='black'" name="new-pass" id="new-pass" >Update Password</button> 
+
         </form>
     </div>
 </body>

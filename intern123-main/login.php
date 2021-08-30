@@ -89,38 +89,42 @@ if($_SERVER['REQUEST_METHOD']== 'POST'){
 <html>
 <head>
   <title>LOGIN</title>
+
   <link rel="stylesheet" type="text/css" href="login.css">
   <script type="text/javascript" src="scripts.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="signin1.css">
+  <link rel="stylesheet" type="text/css" href="newteachersignin.css">
 </head>
-<body>
+<body >
 
-  <div class="wrapper">
-        <h1>LOGIN</h1><br>
-        <center><H3>New User?<a href="signin1.php" onmouseover="style.color='red'" onmouseout="style.color='black'" > CLICK TO SIGN IN </a></H3></center><br>
+  <div class="wrapper" style="background-color: aliceblue;">
+        <h1 style="color:black"><b>Login<b></h1>
+        <center><h3 class="text-center">New User?<a href="signin1.php" onmouseover="style.color='green'" onmouseout="style.color='black'" > CLICK TO SIGN IN </a></h3></center><hr>
+   
         <div id="error_message"><?php echo $LoginErr;?></div>
 
 
-        <form action="" method="POST" >
+        <form action="" method="POST" class="form1">
+        <div class="form-group ">
             <div class="input_field">
                 <label for="username">Username<span class="error">*  <?php echo $nameErr;?></label>
                 <br>
-                <input type="text" name="username" id="username" placeholder="USERNAME">
+                <input type="text" class="form-control" name="username" id="username" placeholder="USERNAME">
             </div>
-            <br>
-
+</div>
+<div class="form-group ">
             <div class="input_field">
                 <label for="password">Password<span class="error">*  <?php echo $passErr;?></label>
                 <br>
-                <input type="password" name="password" id="password" placeholder="PASSWORD" >
+                <input type="password" class="form-control" name="password" id="password" placeholder="PASSWORD" >
             </div>
-            <br>
-            <div class="btn">
-                <button type="submit" onmouseover="style.color='red'" onmouseout="style.color='black'"> LOGIN</button> 
             </div>
-            <br>
-            <div class="btn">
-                <button type="submit" onmouseover="style.color='red'" onmouseout="style.color='black'" ><a href="forgotpass.php">Forgot Password</a></button> 
-            </div>
+         <br>
+                <button type="submit" class="b1 btn btn-primary"  onmouseout="style.color='black'"> LOGIN</button> 
+           
+                <button type="submit" class="btn btn-warning" onmouseover="style.color='red'" onmouseout="style.color='black'" ><a href="forgotpass.php">Forgot Password</a></button> 
+
         </form>
     </div>
 </body>
